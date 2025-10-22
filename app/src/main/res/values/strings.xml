@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">News App</string>
+    <string name="headlines_title">Top Headlines</string>
+    <string name="article_detail_title">Article Details</string>
+    <string name="retry">Retry</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_articles">No articles available</string>
+    <string name="loading">Loading...</string>
+    <string name="error_network">Network error occurred</string>
+    <string name="error_generic">An error occurred</string>
+    <string name="biometric_auth_title">Biometric Authentication</string>
+    <string name="biometric_auth_subtitle">Authenticate to access the app</string>
+    <string name="biometric_cancel">Cancel</string>
+    <string name="authenticating">Authenticating...</string>
+</resources>
