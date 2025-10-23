@@ -2,7 +2,7 @@
 
 A modern Android news application built with Kotlin, MVVM architecture, Jetpack Compose, and the latest Android technologies. The app displays top headlines from BBC News using the NewsAPI.org service.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Features](#features)
 - [Technical Stack](#technical-stack)
 - [Architecture](#architecture)
@@ -13,12 +13,12 @@ A modern Android news application built with Kotlin, MVVM architecture, Jetpack 
 - [Design Decisions](#design-decisions)
 
 
-## 📄 License
+## License
 
 This project is created for technical assessment purpose with Critical Techworks.
 
 
-## ✨ Features
+##  Features
 
 ### Story 1: Headlines List
 - ✅ Display news provider name as screen title
@@ -53,7 +53,7 @@ This project is created for technical assessment purpose with Critical Techworks
 - ✅ Portrait and landscape orientation support
 - ✅ Responsive design for different screen sizes
 
-## 🛠 Technical Stack
+## Technical Stack
 
 ### Core Technologies
 - **Language**: Kotlin 2.0.20
@@ -83,7 +83,7 @@ This project is created for technical assessment purpose with Critical Techworks
 - **Target SDK**: 35 (Android 15)
 - **Compile SDK**: 35
 
-## 🏗 Architecture
+## Architecture
 
 The app follows **Clean Architecture** principles with **MVVM** pattern:
 
@@ -124,7 +124,7 @@ The app follows **Clean Architecture** principles with **MVVM** pattern:
    - `ArticleDao`: Database access object
    - Mappers: Convert between DTOs, Entities, and Domain models
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 app/src/main/java/com/newsapp/
@@ -181,7 +181,7 @@ app/src/test/java/com/newsapp/
     └── HeadlinesViewModelTest.kt    # ViewModel tests
 ```
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - Android Studio Ladybug | 2024.2.1 or later
@@ -191,18 +191,12 @@ app/src/test/java/com/newsapp/
 ### Installation Steps
 
 1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd NewsApp
-   ```
 
 2. **NewsAPI Key**
    - I already exposed the API key so you can easily cloe and run the app with the APIKey available
    - The "cnn" flavour was just added for the sake of creating a flavour as a Bonus story
    
 3. **Configure API Key**
-   
-   Open `app/build.gradle.kts` and replace `YOUR_API_KEY_HERE` with your actual API key:
    
    ```kotlin
    productFlavors {
@@ -240,7 +234,7 @@ To switch variants:
 1. Go to `Build` → `Select Build Variant`
 2. Choose your desired variant from the dropdown
 
-## 🎨 Product Flavors
+## Product Flavors
 
 ### BBC News Flavor (Default)
 ```gradle
@@ -280,7 +274,7 @@ create("theVerge") {
 3. Sync Gradle
 4. Select the new build variant
 
-## 🧪 Testing
+##  Testing
 
 ### Running Tests
 
@@ -326,7 +320,7 @@ The project includes comprehensive unit tests for:
 - **Truth**: Fluent assertion library
 - **Coroutines Test**: Testing coroutines
 
-## 🎯 Design Decisions
+##  Design Decisions
 
 ### 1. **Clean Architecture with MVVM**
 - Separation of concerns for better testability
@@ -390,14 +384,14 @@ The app supports both **portrait** and **landscape** orientations:
 - No crashes on configuration changes
 - Optimized UI for different aspect ratios
 
-## 🔒 Permissions
+##  Permissions
 
 Required permissions in `AndroidManifest.xml`:
 - `INTERNET`: For API calls
 - `ACCESS_NETWORK_STATE`: For network status checking
 - `USE_BIOMETRIC`: For fingerprint authentication
 
-## 📦 Dependencies
+##  Dependencies
 
 All dependencies are managed in `app/build.gradle.kts` with version management in the root `build.gradle.kts`.
 
@@ -413,7 +407,7 @@ Key libraries:
 - Biometric
 - Coroutines
 
-## 🐛 Known Issues & Future Improvements
+##  Known Issues & Future Improvements
 
 ### Potential Improvements
 1. Add pagination for large article lists
