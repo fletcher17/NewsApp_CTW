@@ -14,19 +14,12 @@ import com.newsapp.presentation.detail.ArticleDetailScreen
 import com.newsapp.presentation.headlines.HeadlinesScreen
 import com.newsapp.presentation.headlines.HeadlinesViewModel
 
-sealed class Screen(val route: String) {
-    data object Headlines : Screen("headlines")
-    data object ArticleDetail : Screen("article_detail/{articleIndex}") {
-        fun createRoute(articleIndex: Int) = "article_detail/${articleIndex}"
-    }
-}
-
 @Composable
 fun NewsNavGraph(
     navController: NavHostController,
     startDestination: String = Screen.Headlines.route
 ) {
-    //var selectedArticle: Article? = null
+
     val sharedViewModel: HeadlinesViewModel = hiltViewModel()
 
 
@@ -37,7 +30,6 @@ fun NewsNavGraph(
         composable(route = Screen.Headlines.route) {
             HeadlinesScreen(
                 onArticleClick = { article ->
-//                    selectedArticle = article
                     // Store selected article and navigate using index
                     val state = sharedViewModel.state.value
                     val articleIndex = state.articles.indexOf(article)
@@ -71,16 +63,5 @@ fun NewsNavGraph(
                 )
             }
         }
-
-//        composable(route = Screen.ArticleDetail.route) {
-//            selectedArticle?.let { article ->
-//                ArticleDetailScreen(
-//                    article = article,
-//                    onNavigateBack = {
-//                        navController.popBackStack()
-//                    }
-//                )
-//            }
-//        }
     }
 }
